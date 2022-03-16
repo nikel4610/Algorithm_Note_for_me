@@ -6,7 +6,7 @@ for i in range(T):
     print(a + b)
 
 # import sys
-# 처음에 input = sys.stdin.readline() 처음에 하면 OKAY
+# 처음에 input = sys.stdin.readline 처음에 하고 int(input()) 이런식으로 하기
 # 한개의 정수를 입력받을 때
 a = int(sys.stdin.readline())
 
