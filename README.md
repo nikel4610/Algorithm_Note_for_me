@@ -4,4 +4,6 @@
 **input()대신sys.py 로 속도 줄이기
   
   print문에 str(i) 주의  
-  while True : ~~
+  while True : ~~  
+ 
+ # 오답노트 다시 풀어보기
