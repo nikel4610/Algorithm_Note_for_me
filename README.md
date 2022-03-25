@@ -9,4 +9,4 @@
  # 오답노트 다시 풀어보기  
  https://github.com/nikel4610/Algorithm_Note_for_me/tree/main/%EC%98%A4%EB%8B%B5%EB%85%B8%ED%8A%B8/1%EC%B0%A8%EC%9B%90%EB%B0%B0%EC%97%B4
   
-  for ~ in range 부분 확실하게
+  for ~ in range 부분 확실하게 + list조심
