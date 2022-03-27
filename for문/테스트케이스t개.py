@@ -19,3 +19,13 @@ result = 0
 for i in b:
     result += int(i)
 print(result)
+
+a = str(input())
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+for i in alphabet:
+    if i in a:
+        print(a.index(i), end=' ') # 알파벳 인덱스별로 i 넣기
+    else:
+        print(-1, end=' ')
+        
