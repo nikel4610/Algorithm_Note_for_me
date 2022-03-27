@@ -11,3 +11,11 @@ sum = 0
 for i in range(1, n+1):
     sum += i
 print(sum)
+
+# 숫자 연속 입력을 따로따로 나누기
+a = int(input())
+b = int(input())
+result = 0
+for i in range(a):
+    result += int(b[i]) # int(b[i] -> 숫자 따로 나누기
+print(result)
