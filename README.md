@@ -12,4 +12,5 @@
   for ~ in range 부분 확실하게 + list조심  
  int() -> 자릿수로 숫자 나누기  
  백준 문자열 부분 다시 공부 -> 풀기  
- list(map(int, input().split())) -> 리스트 따로 안만들고 바로 가능
+ list(map(int, input().split())) -> 리스트 따로 안만들고 바로 가능  
+ sum -> 숫자 단위별로 나
