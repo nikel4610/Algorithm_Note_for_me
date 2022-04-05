@@ -13,3 +13,22 @@ for i in range(n):
             else:
                 result = max(result, a[i]+ a[j]+ a[k])
 print(result)
+
+n = int(input())
+
+inf = []
+num = []
+
+for _ in range(n):
+    a, b = map(int, input().split())
+    inf.append((a, b))
+
+for i in range(n): ## 고르고 다음 -> for 겹쳐쓰기
+    count = 0
+    for j in range(n):
+        if inf[i][0] < inf[j][0] and inf[i][1] < inf[j][1]:
+            count += 1
+    num.append(count + 1)
+
+for d in num:
+    print(d, end=" ")
