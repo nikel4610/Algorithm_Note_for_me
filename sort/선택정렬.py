@@ -11,3 +11,8 @@ for i in range(len(array)):
     array[i], array[min_index] = array[min_index], array[i] # 자리 바꿈
     
 print(array)
+
+# for i in range(n):
+#     for j in range(i+1):
+#         result += time[j]
+# (()) 2중 리스트 반복
