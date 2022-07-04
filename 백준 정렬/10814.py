@@ -11,3 +11,4 @@ for i in range(n):
 list.sort()
 for i in range(len(list)):
     print("%d %s"%(list[i][0], list[i][2]))
+    # 외우기

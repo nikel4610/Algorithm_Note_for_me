@@ -1,10 +1,18 @@
-a = 7
-b = 2
+su, total = 0, 0
 
-hap = a+b
-sub = a-b
-gob = a*b
-mok = a/b
-nmg = a%b
-
-print("7 + 2 =", hap)
+su = 1
+total += su
+print(su, end=' ')
+su = 2
+total += su
+print(su, end=' ')
+su = 3
+total += su
+print(su, end=' ')
+su = 4
+total += su
+print(su, end=' ')
+su = 5
+total += su
+print(su, end=' ')
+print('total =', total)

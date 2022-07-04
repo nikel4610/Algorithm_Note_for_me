@@ -14,3 +14,4 @@ result = sorted(list)
 for i in range(n):
     print(result[i][0], result[i][1])
     # i에 0부터 쭉쭉 돌아가며 인덱싱
+    # 외우기
