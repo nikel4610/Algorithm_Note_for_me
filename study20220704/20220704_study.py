@@ -1,9 +1,9 @@
-kor, eng = map(int, input().split())
+kor, eng, hap, avg = (0, 0, 0, 0)
+kor = 90
+eng = 85
 
-sum_score = kor + eng
-avg_score = sum_score // 2
+hap = kor + eng
+avg = hap/2
 
-if avg_score > 70:
-    print('합격')
-else:
-    print('불합격')
+print('총점 = ', hap)
+print('평균 = ', avg)
