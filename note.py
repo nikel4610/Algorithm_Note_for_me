@@ -1,5 +1,5 @@
 import sys
-from collections import deque
+import collections
 
 input = sys.stdin.readline # 기본
 
