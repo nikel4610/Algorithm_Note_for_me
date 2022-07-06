@@ -1,11 +1,9 @@
-hap = 0
-su = 0
+a = 9
+b = 3
+c = 6
 
-for i in range(1, 11, 1):
-    su += 1
-    hap += i
-    print(su, end = ' ')
-    if su == 10:
-        print(hap, end = ' ')
-        break
-        
+list = []
+list.append(a)
+list.append(b)
+list.append(c)
+print(sorted(list))
