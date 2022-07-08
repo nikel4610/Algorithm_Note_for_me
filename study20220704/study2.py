@@ -12,6 +12,10 @@ b = int(re.sub(r'[^0-9]', '', b))
 # blue = re.findall('\d+', b)
 # total = apple + blue -> 리스트형이 됨
 
+# hap = 0
+# for i in total:
+#     hap += int(i)
+# print(hap)
 
 total = a+b
 
