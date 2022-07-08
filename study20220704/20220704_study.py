@@ -1,12 +1,17 @@
-name = ''
-score, total = 0, 0
+import time
 
-while True:
-    name = input('이름입력: ')
-    score = int(input('점수입력 '))
-    if score == str(score):
-        continue
-    break
+path = './testdata/test.txt'
 
-total = score + 11
-print(f'{name}학생의 최종 점수는 {total}입니다.')
+fw = open(path, 'w', encoding='UTF-8')
+# 'a' -> 텍스트 추가
+fw.write('배고프다 \n')
+fw.write('점심 머먹징 \n')
+fw.write('write 성공! \n')
+print(path, '파일저장 완료!')
+fw.close()
+
+time.sleep(2)
+fr = open(path, 'r', encoding='UTF-8')
+print(fr.read())
+fr.close()
+print()
