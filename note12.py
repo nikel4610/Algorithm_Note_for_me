@@ -37,3 +37,4 @@ def myRank(data):
         j.append(1)                         
         for v in data.values():
             if j[3] < v[3]:
+                j[4] += 1
