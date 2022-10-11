@@ -20,4 +20,11 @@ def solution(n):
 
 # 문자열 정렬
 def solution(my_string):
-    return ''.join(sorted(my_string.lower()))
+    return ''.join(sorted(my_string.lower())) # -> 이게 가장 나은거 같음
+
+# 문자열 삽입 (append, join X)
+def solution(my_string, n):
+    answer = ''
+    for i in my_string:
+        answer += i*n
+    return answer
