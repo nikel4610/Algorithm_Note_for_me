@@ -10,3 +10,10 @@ def solution(num_list):
     return answer
 
 # 숫자 판별 -> isdigit()
+
+# 각 자리 숫자 합
+def solution(n):
+    result = 0
+    for i in str(n):
+        result += int(i)
+    return result
