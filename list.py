@@ -8,3 +8,5 @@ def solution(num_list):
         elif i % 2 == 1:
             answer[1] += 1
     return answer
+
+# 숫자 판별 -> isdigit()
