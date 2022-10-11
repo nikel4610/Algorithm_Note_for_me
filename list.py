@@ -15,5 +15,9 @@ def solution(num_list):
 def solution(n):
     result = 0
     for i in str(n):
-        result += int(i)
+        result += int(i) # int로 변환해서 넣기
     return result
+
+# 문자열 정렬
+def solution(my_string):
+    return ''.join(sorted(my_string.lower()))
