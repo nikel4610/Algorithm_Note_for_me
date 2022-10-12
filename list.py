@@ -38,5 +38,11 @@ def solution(num, k):
         return -1
 
 # join은 str밖에 안됨 / int값 join 시키는 방법
-"".join(map(str, array)) -> count('숫자')로 갯수 세기
+# "".join(map(str, array)) -> count('숫자')로 갯수 세기
 # count도 str만 갯수 세는거 가능해서 꼭 '' 붙여야됨
+
+# ** 숫자 갯수 세는거 -> 그냥 str붙여서 문자열로 만들고 count('숫자')로 갯수 세기 or 확인하기
+# -> 이때 문자열 추가 할 떄 + 사용
+
+# 순서 상관없이 정렬 -> set
+# 순서 고려해서 정렬 -> dict.fromkeys()
