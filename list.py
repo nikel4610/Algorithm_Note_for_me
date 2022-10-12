@@ -28,3 +28,15 @@ def solution(my_string, n):
     for i in my_string:
         answer += i*n
     return answer
+
+# 숫자중에 k가 있으면 그 숫자의 자릿수 출력
+def solution(num, k):
+    num = str(num)
+    if str(k) in num:
+        return num.index(str(k)) + 1
+    else:
+        return -1
+
+# join은 str밖에 안됨 / int값 join 시키는 방법
+"".join(map(str, array)) -> count('숫자')로 갯수 세기
+# count도 str만 갯수 세는거 가능해서 꼭 '' 붙여야됨
