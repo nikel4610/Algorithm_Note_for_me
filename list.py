@@ -45,4 +45,29 @@ def solution(num, k):
 # -> 이때 문자열 추가 할 떄 + 사용
 
 # 순서 상관없이 정렬 -> set
+# 리스트 set -> list(set(리스트))
 # 순서 고려해서 정렬 -> dict.fromkeys()
+
+# dict 넣기 + replace
+def solution(numbers):
+    answer = ''
+    dict = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}
+    for i in dict:
+        numbers = numbers.replace(i, str(dict[i]))
+    return int(numbers)
+
+# 글자순으로 list
+'문장'.split()
+
+# 리스트 sort -> sorted(리스트) -> 리스트.sort() -> 리스트.sort(reverse=True)
+def solution(spell, dic):
+    answer = 2
+    for i in dic:
+        if len(spell) == len(i): # 차근차근 생각하기(소거법)
+            for j in spell:
+                if j in i: # 단어가 안에 있다면 을 확인하려면 in 사용
+                    answer = 1
+                else:
+                    answer = 2
+                    break
+    return answer # -> set을 사용해서 해결 가능
