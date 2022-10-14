@@ -34,3 +34,19 @@ bin('10진수')
 
 # 문자열 계산
 eval('문자열')
+
+# 최대공약수
+import math
+math.gcd('숫자1', '숫자2')
+
+# 최빈값 구하기
+def solution(array):
+    answer = 0
+    count = 0
+    for i in range(len(array)):
+        if array.count(array[i]) > count:
+            count = array.count(array[i])
+            answer = array[i]
+        elif array.count(array[i]) == count and array[i] != answer:
+            answer = -1
+    return answer

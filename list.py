@@ -71,3 +71,13 @@ def solution(spell, dic):
                     answer = 2
                     break
     return answer # -> set을 사용해서 해결 가능
+
+import re
+# 라이브러리 re 사용
+re.findall('\d+', 'abc123def56zz')
+# list(map(int, re.findall('\d+', my_string)))
+# ['123', '56']
+
+# 값을 뺴기
+answer = []
+answer.append(-int('리스트'))
