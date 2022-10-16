@@ -38,6 +38,8 @@ eval('문자열')
 # 최대공약수
 import math
 math.gcd('숫자1', '숫자2')
+# 최소공배수
+math.lcm('숫자1', '숫자2')
 
 # 최빈값 구하기
 def solution(array):
@@ -50,3 +52,30 @@ def solution(array):
         elif array.count(array[i]) == count and array[i] != answer:
             answer = -1
     return answer
+
+a.sort(jey=lamda x : (abs(x), -x))
+-> 우선순위 (우선순위1, 우선순위2) 중복될 경우
+
+import math
+
+
+def soinsu(n):
+    answer = []
+    for i in range(2, n + 1):  # 소인수분해라서 2부터 시작
+        while n % i == 0:  # 더이상 나눠지지 않을 때 까지 반복
+            answer.append(i)
+            n = n // i  # 나누기
+    return answer
+
+# set 활용하기 기약분수
+def solution(a, b):
+    answer = 0
+    gcd = math.gcd(a, b)
+    a = int(a // gcd)
+    b = int(b // gcd)
+    soin = set(soinsu(b))
+
+    if len(soin - set([2])) == 0 or len(soin - set([5])) == 0 or len(soin - set([2, 5])) == 0:
+        return 1
+    else:
+        return 2
