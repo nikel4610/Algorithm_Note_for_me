@@ -81,3 +81,12 @@ re.findall('\d+', 'abc123def56zz')
 # 값을 뺴기
 answer = []
 answer.append(-int('리스트'))
+
+# 크기 순서대로 인덱스 추가해주기
+def solution(emergency):
+    answer = []
+    a = sorted(emergency) # -> 크기 순서대로 정렬
+    a.reverse()
+    for i in emergency:
+        answer.append(a.index(i)+1)
+    return answer

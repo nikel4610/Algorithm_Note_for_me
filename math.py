@@ -55,6 +55,13 @@ def solution(array):
 
 a.sort(jey=lamda x : (abs(x), -x))
 -> 우선순위 (우선순위1, 우선순위2) 중복될 경우
+# 예시
+def solution(numlist, n):
+    answer = []
+    # 절댓값으로 정렬해서 중복될 경우 -x가 후순위로 정렬
+    numlist.sort(key=lambda x: (abs(x - n), -x))
+    answer = numlist
+    return answer
 
 import math
 
@@ -79,3 +86,4 @@ def solution(a, b):
         return 1
     else:
         return 2
+
