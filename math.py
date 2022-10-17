@@ -87,3 +87,16 @@ def solution(a, b):
     else:
         return 2
 
+# * 파이썬 앞에 숫자를 0으로 채우기 -> .zfill('자릿수')
+# ex) 1 -> 001 : .zfill(3)
+
+# 자릿수 덧셈
+def solution(n):
+    answer = 0
+    for i in str(n): # <- 문자열로 바꾸기
+        answer += int(i)
+    return answer
+
+# 최소 최대
+min('리스트')
+max('리스트')
