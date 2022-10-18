@@ -32,3 +32,7 @@ def solution(participant, completion):
 # https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ouo7581&logNo=221543909505
 # from collections import Counter, deque, defaultdict
 # 내용 확인 및 공부하기
+dic = defaultdict('리스트')
+for key, value in '리스트':
+    dic[v].append(k)
+# -> 이렇게 하면 dic에 '리스트'의 value가 key가 되어 붕복되는 부분이 value로 저장됨
