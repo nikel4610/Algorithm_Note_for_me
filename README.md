@@ -22,3 +22,7 @@
  * 문자열 뒤집기 -> string[::-1]
  * abs() -> 절댓값
  * 왠만하면 따로 두고 풀기
+
+numbers.sort(key=lambda x: x*3, reverse=True)
+* 문자열 정렬 -> 문자열 * 3 해서 정렬(자릿수가 10^3이하)
+* 
