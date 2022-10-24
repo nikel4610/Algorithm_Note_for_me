@@ -59,7 +59,7 @@ def solution(numbers):
 # 글자순으로 list
 '문장'.split()
 
-# 리스트 sort -> sorted(리스트) -> 리스트.sort() -> 리스트.sort(reverse=True)
+# 리스트 sort -> sorted(리스트) V -> 리스트.sort() V -> 리스트.sort(reverse=True)
 # 리스트 역순 정렬(크기별로) -> 리스트.sort(reverse=True)
 # 리스트 역순 정렬(크기 상관 X) -> 리스트.reverse()
 def solution(spell, dic):
@@ -92,3 +92,6 @@ def solution(emergency):
     for i in emergency:
         answer.append(a.index(i)+1)
     return answer
+
+# 리스트를 set
+list(set('리스트'))
