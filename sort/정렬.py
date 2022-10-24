@@ -1,10 +1,16 @@
 list = []
 
-list.sort() # 그냥 정렬 순서대로
-list.sort(reverse = True) # 거꾸로 정렬
-list.sort(key = lambda x:x[n]) # x[n] 기준으로 정렬해줌
+# list.sort() # 그냥 정렬 순서대로
+# list.sort(reverse = True) # 거꾸로 정렬
+
+sorted(리스트, key=lambda x: 기준)
+# list.sort(key = lambda x:x[n]) # x[n] 기준으로 정렬해줌
 # (x[n], x[n+1])
 # n -> 정수
+
+# 리스트 sort -> sorted(리스트) -> 리스트.sort() -> 리스트.sort(reverse=True)
+# 리스트 역순 정렬(크기별로) -> 리스트.sort(reverse=True)
+# 리스트 역순 정렬(크기 상관 X) -> 리스트.reverse()
 
 import sys
 input = sys.stdin.readline
