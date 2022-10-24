@@ -1,9 +1,8 @@
 # 최소공배수 (여기선 n과 6의 최소공배수)
-def solution(n):
-    answer = 0
-    for i in range(max(n, 6), (n*6)+1):
-        if i%n == 0 and i%6 == 0:
-            return i//6
+def lcm(a, b):
+    for i in range(max(a, b), (a * b) + 1):
+        if i % a == 0 and i % b == 0:
+            return i
 
 # 소인수분해
 def solution(n):
@@ -100,3 +99,19 @@ def solution(n):
 # 최소 최대
 min('리스트')
 max('리스트')
+
+# for i, p in enumerate(word) -> i: index, p: value (0 t, 1 h ...)
+enumerate() -> 인덱스와 값을 함께 반환
+
+# 10진수를 n진수로 변환
+d = 45
+n = 3
+# -> 45를 3진수로 표현하기
+tmp = ''
+while d:
+    tmp += str(d % n) # 반대로 넣으면 뒤집어진다
+    d //= n
+
+# 비트 연산자
+# https://dojang.io/mod/page/view.php?id=2460 참고
+bin(10진수 &|^~ 10진수) -> 2진수로 변환(and or xor not)
