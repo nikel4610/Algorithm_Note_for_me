@@ -126,3 +126,15 @@ def solution(n):
         else:
             answer += 1
     return answer
+
+# 더 좋은 소수 구하기
+import math
+def primenumber(x):
+    for i in range (2, int(math.sqrt(x) + 1)):	# 2부터 x의 제곱근까지의 숫자
+        if x % i == 0:		# 나눠떨어지는 숫자가 있으면 소수가 아님
+            return False
+    return True
+
+# 아주 좋은 라이브러리
+from itertools import *
+map('sum or max or min or ...', combinations('리스트', '몇개 뽑을지'))

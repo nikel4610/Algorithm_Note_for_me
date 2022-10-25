@@ -1,4 +1,5 @@
 # [TODO] -> 밑에 이해 안되는 부분 다시 공부
+# https://school.programmers.co.kr/learn/courses/30/lessons/17681
 def solution(n, arr1, arr2):
     answer = []
     for i in range(len(arr1)):
@@ -8,3 +9,5 @@ def solution(n, arr1, arr2):
     print(("0" *(n - len(bina)) + bina)) # 이 부분 이해가 안됨
     return answer
 
+
+# https://school.programmers.co.kr/learn/courses/30/lessons/42889
