@@ -59,7 +59,7 @@ def solution(numbers):
 # 글자순으로 list
 '문장'.split()
 
-# 리스트 sort -> sorted(리스트) V -> 리스트.sort() V -> 리스트.sort(reverse=True)
+# 리스트 정렬 -> 리스트.sort(reverse = ...)
 # 리스트 역순 정렬(크기별로) -> 리스트.sort(reverse=True)
 # 리스트 역순 정렬(크기 상관 X) -> 리스트.reverse()
 def solution(spell, dic):
@@ -95,3 +95,40 @@ def solution(emergency):
 
 # 리스트를 set
 list(set('리스트'))
+
+# 리스트1의 차집합 ( 리스트1 - 리스트2 )
+sub = [x for x in '리스트1' if x not in '리스트2']
+# 공통된 부분 넣기 -> 리스트1 + 리스트2
+add = [x for x in '리스트1' if x in '리스트2']
+
+# 문자열을 리스트로 만들기
+# * split()을 하면 연속된 공백도 하나의 공백으로 인식
+s = list(map(int, s.split()))
+
+# TODO -> 스택 다시 https://school.programmers.co.kr/learn/courses/30/lessons/12973
+# stack 문제
+def solution(s):
+    answer = 0
+    stack = []
+    for i in s:
+        if not stack:
+            stack.append(i)
+        else:
+            if stack[-1] == i:
+                stack.pop()
+            else:
+                stack.append(i)
+    if not stack:
+        answer = 1
+    return answer
+
+# deque 사용법
+from collections import deque
+# https://duckracoon.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-collections-deque-%EC%82%AC%EC%9A%A9%EB%B2%95%EA%B3%BC-%EC%9D%91%EC%9A%A9
+q = deque('리스트')
+deque.apppend() # 오른쪽에 추가
+deque.appendleft() # 왼쪽에 추가
+deque.clear() # 모든 요소 삭제
+deque.insert('위치', '값') # 위치에 값 추가
+deque.pop() # 오른쪽 요소 삭제
+deque.popleft() # 왼쪽 요소 삭제

@@ -138,3 +138,6 @@ def primenumber(x):
 # 아주 좋은 라이브러리
 from itertools import *
 map('sum or max or min or ...', combinations('리스트', '몇개 뽑을지'))
+
+# 10진수에서 2진수 변환
+bin('10진수')
