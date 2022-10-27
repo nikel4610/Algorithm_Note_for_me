@@ -116,17 +116,6 @@ while d:
 # https://dojang.io/mod/page/view.php?id=2460 참고
 bin(10진수 &|^~ 10진수) -> 2진수로 변환(and or xor not)
 
-# 소수 구하기 (효율성 안좋음)
-def solution(n):
-    answer = 0
-    for i in range(2, n+1):
-        for j in range(2, i):
-            if i%j == 0:
-                break
-        else:
-            answer += 1
-    return answer
-
 # 더 좋은 소수 구하기
 import math
 def primenumber(x):

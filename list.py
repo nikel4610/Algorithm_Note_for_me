@@ -96,6 +96,9 @@ def solution(emergency):
 # 리스트를 set
 list(set('리스트'))
 
+# 리스트 한번에 넣기
+s = [i.split() for i in s] # 느낌
+
 # 리스트1의 차집합 ( 리스트1 - 리스트2 )
 sub = [x for x in '리스트1' if x not in '리스트2']
 # 공통된 부분 넣기 -> 리스트1 + 리스트2
@@ -130,5 +133,7 @@ deque.apppend() # 오른쪽에 추가
 deque.appendleft() # 왼쪽에 추가
 deque.clear() # 모든 요소 삭제
 deque.insert('위치', '값') # 위치에 값 추가
-deque.pop() # 오른쪽 요소 삭제
+deque.pop() # 오른쪽 요소 삭제 ** pop() 유용하게 많이 쓰이니까 기억하기
 deque.popleft() # 왼쪽 요소 삭제
+# TODO -> dq 문제 다시 풀기
+# https://school.programmers.co.kr/learn/courses/30/lessons/42885
