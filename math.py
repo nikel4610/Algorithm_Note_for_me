@@ -140,7 +140,7 @@ map('sum or max or min or ...', combinations('리스트', '몇개 뽑을지'))
 # 10진수에서 2진수 변환
 bin('10진수')
 
-# k진수로 바꾸기
+# n을 k진수로 바꾸기
 a = ''
 while n>0:
     a += str(n%k)

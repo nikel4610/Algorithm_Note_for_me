@@ -9,4 +9,5 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/17677 뉴스클러스터링
 # https://school.programmers.co.kr/learn/courses/30/lessons/92341 주차요금**
 # https://school.programmers.co.kr/learn/courses/30/lessons/17684 압축**
-#
+# https://school.programmers.co.kr/learn/courses/30/lessons/42888 오픈채팅방**
+# https://school.programmers.co.kr/learn/courses/30/lessons/17687 n진수게임
