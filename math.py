@@ -116,6 +116,15 @@ while d:
 # https://dojang.io/mod/page/view.php?id=2460 참고
 bin(10진수 &|^~ 10진수) -> 2진수로 변환(and or xor not)
 
+# 소수 구하기
+def is_prime(num):
+    if num == 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num%i == 0:
+            return False
+    return True
+
 # 더 좋은 소수 구하기
 import math
 def primenumber(x):
@@ -130,3 +139,13 @@ map('sum or max or min or ...', combinations('리스트', '몇개 뽑을지'))
 
 # 10진수에서 2진수 변환
 bin('10진수')
+
+# k진수로 바꾸기
+a = ''
+while n>0:
+    a += str(n%k)
+    n = n//k
+a = a[::-1] -> a를 뒤집어 k진수로 만듬
+
+# 빈칸 없이 숫자 형태로 리스트 넣기
+num = [int(num) for num in num if num !='']

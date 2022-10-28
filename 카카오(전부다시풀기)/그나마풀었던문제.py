@@ -101,3 +101,29 @@ def solution(survey, choices):
 
 #----------------------------------------
 
+# https://school.programmers.co.kr/learn/courses/30/lessons/92335
+def is_prime(num):
+    if num == 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num%i == 0:
+            return False
+    return True
+
+def solution(n, k):
+    answer = 0
+    num = ''
+    while n>0:
+        num += str(n%k)
+        n = n//k
+    num = num[::-1]
+    num = num.split('0')
+    num = [int(num) for num in num if num !='']
+
+    for i in range(len(num)):
+        if is_prime(num[i]):
+            answer += 1
+    return answer
+
+#----------------------------------------
+
