@@ -1,4 +1,4 @@
-# TODO -> 카카오 문제 다시 풀어보기
+# TODO -> 카카오(전부다시풀기) 문제 다시 풀어보기
 # https://school.programmers.co.kr/learn/courses/30/lessons/17681
 def solution(n, arr1, arr2):
     answer = []
