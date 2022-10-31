@@ -9,3 +9,6 @@ def solution(n):
 # 문자열만 뽑기
 c = list(filter(str.isalpha, a))
 c =''.join(c)
+
+# https://school.programmers.co.kr/learn/courses/30/lessons/131701
+# ??? 이거 왜 안풀림 (진짜 모름)

@@ -11,3 +11,7 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/17684 압축**
 # https://school.programmers.co.kr/learn/courses/30/lessons/42888 오픈채팅방**
 # https://school.programmers.co.kr/learn/courses/30/lessons/17687 n진수게임
+# https://school.programmers.co.kr/learn/courses/30/lessons/17686 파일명정렬
+# https://school.programmers.co.kr/learn/courses/30/lessons/72411 메뉴리뉴얼
+# https://school.programmers.co.kr/learn/courses/30/lessons/60058 괄호변환
+# https://school.programmers.co.kr/learn/courses/30/lessons/67257 수식최대화

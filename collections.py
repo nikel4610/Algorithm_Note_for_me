@@ -21,6 +21,10 @@ from collections import Counter
 # 문자열 종류별로 갯수 카운터 해줌
 Counter('문자열')
 
+Counter('문자열').most_common() -> [('문자', 갯수), ('문자', 갯수), ...]
+Counter('문자열').most_common()[0][0] -> 가장 많이 나온 문자
+Counter('문자열').most_common()[0][1] -> 가장 많이 나온 문자 갯수
+
 #합집합 교집합
 sum(('리스트1' & '리스트2').values()) # 교집합
 sum(('리스트1' | '리스트2').values()) # 합집합
