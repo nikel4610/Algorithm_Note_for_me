@@ -37,6 +37,25 @@ def dfs(graph, v, visited):
 dfs(graph, 1, visited)
 # 1 2 7 6 8 3 4 5
 
+# 예시: numbers를 조합하여 target을 만들 수 있는 경우의 수를 구하라
+def solution(numbers, target):
+    res = [0]
+    def dfs(i, n, l):
+        if i == len(l): # i가 l의 길이와 같아지면
+            if n == target: # n이 target과 같으면
+                res[0] += 1 # res[0]에 1을 더해준다
+            return
+        v = l[i] # v에 l의 i번째 값을 넣어준다
+        dfs(i + 1, n + v, l) # dfs를 재귀적으로 호출한다
+        dfs(i + 1, n - v, l)
+
+    dfs(0, 0, numbers)
+    return res[0]
+
+numbers = [1, 1, 1, 1, 1]
+target = 3
+print(solution(numbers, target)) # 5
+
 # ---------------------------------------------
 
 # BFS -> 큐 (from collections import deque)
