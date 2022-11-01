@@ -134,8 +134,13 @@ def primenumber(x):
     return True
 
 # 아주 좋은 라이브러리
+# https://seu11ee.tistory.com/5
 from itertools import *
 list(map('sum or max or min or ...', combinations('리스트', '몇개 뽑을지')))
+# permutation -> 순열 만들기
+list(map(''.join, permutations('문자열', '몇개 뽑을지')))
+ for a, b in itertools.permutations(['1', '2', '3'], 2):
+...     print(a+b)
 
 # 10진수에서 2진수 변환
 bin('10진수')

@@ -128,3 +128,9 @@ def solution(s):
     if not stack:
         answer = 1
     return answer
+
+# 리스트 안에 리스트 세로로 뽑기
+# move에 따라 board의 값 뽑기 세로 기준
+for i in moves:
+        for j in range(len(board)):
+            print(board[j][i-1])

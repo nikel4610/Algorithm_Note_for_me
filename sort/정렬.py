@@ -7,6 +7,8 @@ sorted(리스트, key=lambda x: 기준)
 # list.sort(key = lambda x:x[n]) # x[n] 기준으로 정렬해줌
 # (x[n], x[n+1])
 # n -> 정수
+# -n[1] -> 리스트 속 리스트 1번자리 기준으로 작은 값 부터 정렬
+# n[0] -> 리스트 속 리스트 0번자리 기준으로 큰 값 부터 정렬
 
 # 리스트 sort -> sorted(리스트) -> 리스트.sort() -> 리스트.sort(reverse=True)
 # 리스트 역순 정렬(크기별로) -> 리스트.sort(reverse=True)

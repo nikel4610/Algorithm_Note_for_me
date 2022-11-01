@@ -3,7 +3,7 @@
 def solution(n, arr1, arr2):
     answer = []
     for i in range(len(arr1)):
-        bina = bin(arr1[i]|arr2[i])[2:]
+        bina = bin(arr1[i]|arr2[i])[2:] # 2진수 합쳐서 나옴
         answer.append(("0" *(n - len(bina)) + bina).replace("1", "#").replace("0"," "))
     print(answer)
     print(("0" *(n - len(bina)) + bina)) # 이 부분 이해가 안됨
@@ -25,6 +25,27 @@ def solution(N, stages):
             answer.append((0, i))
     answer.sort(key=lambda x: (-x[0], x[1]))
     return [x[1] for x in answer]
+
+
+def solution(N, stages):
+    answer = []
+    fails = []
+    total = len(stages)
+
+    users = [0 for i in range(N + 1)]
+    for stage in stages:
+        users[stage - 1] += 1
+
+    for i in range(N):
+        if users[i] == 0:
+            fails.append([i + 1, 0])
+        else:
+            fails.append([i + 1, users[i] / total])
+            total -= users[i]
+
+    answer = sorted(fails, key=lambda x: (-x[1], x[0]))
+    answer = [i[0] for i in answer]
+    return answer
 
 #----------------------------------------
 

@@ -1,5 +1,4 @@
 # TODO -> 다시풀기
-# https://school.programmers.co.kr/learn/courses/30/lessons/77484 로또
 # https://school.programmers.co.kr/learn/courses/30/lessons/67256 키패드**
 # https://school.programmers.co.kr/learn/courses/30/lessons/64061 인형뽑기**
 # https://school.programmers.co.kr/learn/courses/30/lessons/92334 신고
