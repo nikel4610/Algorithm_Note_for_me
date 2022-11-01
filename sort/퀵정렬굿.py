@@ -50,3 +50,28 @@ def quick_sort(array):
     return quick_sort(left_side) + [pivot] + quick_sort(right_side)
 
 print(quick_sort(array))
+
+# 가장 많이 사용됨
+# 기준 데이터를 선정하고 큰 데이터, 작은 데이터의 위치를 바꾸는 아이디어 에서 착안
+# 기준 데이터 = pivot
+# 시간 복잡도는 O(NlogN)을 보장 -> 데이터가 무작위로 있을 때 가장 빠름 (거의 정렬 되어 있다면 대신 삽입 정렬 사용)
+
+array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+
+
+def quick_sort(array):
+    # 재귀함수 종단 조건
+    if len(array) <= 1:
+        return array
+
+    pivot = array[0] # 기준: 가장 첫번째 원소를 지정하자
+    tail = array[1:]
+
+    # Pivot값 기준으로 왼쪽은 모두 Pivot보다 작은 값, 오른쪽은 큰 값들
+    left_side = [x for x in tail if x <= pivot]
+    right_side = [x for x in tail if x > pivot]
+
+    return quick_sort(left_side) + [pivot] + quick_sort(right_side)
+
+res = quick_sort(array)
+print(res)
