@@ -84,6 +84,10 @@ re.findall('\d+', 'abc123def56zz')
 answer = []
 answer.append(-int('리스트'))
 
+# 리스트의 모든 값 +1
+a = [1,2,3,4,5]
+a = [i+1 for i in a]
+
 # 크기 순서대로 인덱스 추가해주기
 def solution(emergency):
     answer = []
