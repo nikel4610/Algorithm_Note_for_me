@@ -148,3 +148,35 @@ def solution(n, k):
 
 #----------------------------------------
 
+# https://school.programmers.co.kr/learn/courses/30/lessons/67258
+def solution(gems):
+    answer = []
+    gems_kind = len(set(gems))
+    short = len(gems) + 1
+    
+    baguni = {}
+    start = 0
+    end = 0
+    
+    while end < len(gems):
+        if gems[end] not in baguni:
+            baguni[gems[end]] = 1
+        else:
+            baguni[gems[end]] += 1
+        end += 1
+        
+        if len(baguni) == gems_kind:
+            while start < end:
+                if baguni[gems[start]] > 1:
+                    baguni[gems[start]] -= 1
+                    start += 1
+                elif short > end - start:
+                    short = end - start
+                    answer = [start+1, end]
+                    break
+                else:
+                    break
+    return answer
+
+#----------------------------------------
+

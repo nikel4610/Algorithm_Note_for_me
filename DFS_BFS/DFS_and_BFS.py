@@ -99,5 +99,31 @@ def bfs(graph, start, visited):
 bfs(graph, 1, visited)
 # 1 2 3 8 7 4 5 6
 
+# 예시: 게임 맵 최단거리 
+from collections import deque
+
+def solution(maps):
+    xend, yend = len(maps[0]), len(maps)
+    dx = [1,0,-1,0]
+    dy = [0,1,0,-1]
+
+    if xend == 1 and yend == 1:
+        return 1
+
+    queue = deque()
+    queue.append((0,0))
+
+    while queue:
+        x,y = queue.popleft()
+
+        for i in range(4):
+            newx = x+dx[i]
+            newy = y+dy[i]
+
+            if 0 <= newx < xend and 0 <= newy < yend and maps[newx][newy] == 1:
+                maps[newx][newy] = maps[x][y] + 1
+                queue.append((newx,newy))
+
+    return maps[xend-1][yend-1] if maps[xend-1][yend-1] > 1 else -1
 # ---------------------------------------------
 

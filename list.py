@@ -112,7 +112,7 @@ add = [x for x in '리스트1' if x in '리스트2']
 # * split()을 하면 연속된 공백도 하나의 공백으로 인식
 s = list(map(int, s.split()))
 
-# TODO -> 스택 다시 https://school.programmers.co.kr/learn/courses/30/lessons/12973
+# https://school.programmers.co.kr/learn/courses/30/lessons/12973
 # stack 문제
 def solution(s):
     answer = 0
