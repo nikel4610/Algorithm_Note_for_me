@@ -103,27 +103,81 @@ bfs(graph, 1, visited)
 from collections import deque
 
 def solution(maps):
-    xend, yend = len(maps[0]), len(maps)
-    dx = [1,0,-1,0]
-    dy = [0,1,0,-1]
+    h = len(maps)
+    w = len(maps[0])
+    maps[h-1][w-1] = -1
+    # 상하좌우
+    dx = [1, 0, -1, 0]
+    dy = [0, 1, 0, -1]
+    visited = [[0]*w for _ in range(h)]
+    q = deque()
+    answer = 1
+    q.append((0, 0, answer))
 
-    if xend == 1 and yend == 1:
-        return 1
-
-    queue = deque()
-    queue.append((0,0))
-
-    while queue:
-        x,y = queue.popleft()
-
+    # 큐가 빌때까지 반복함
+    while q:
+        x, y, answer = q.popleft()
+        # 현위치에서 네가지 방향으로의 위치 확인
         for i in range(4):
-            newx = x+dx[i]
-            newy = y+dy[i]
+            nx = x + dx[i]
+            ny = y + dy[i]
+            # 미로 공간을 벗어나는 경우 무시
+            if -1 < nx < h and -1 < ny < w:
+                if maps[nx][ny] and visited[nx][ny] == 0:
+                    maps[nx][ny] = answer + 1
+                    visited[nx][ny] = 1
+                    q.append((nx, ny, answer+1))
 
-            if 0 <= newx < xend and 0 <= newy < yend and maps[newx][newy] == 1:
-                maps[newx][newy] = maps[x][y] + 1
-                queue.append((newx,newy))
+    return maps[h-1][w-1]
 
-    return maps[xend-1][yend-1] if maps[xend-1][yend-1] > 1 else -1
 # ---------------------------------------------
 
+# https://school.programmers.co.kr/learn/courses/30/lessons/81302
+# 예시 문제 거리두기 확인하기 
+import queue
+D = ((-1, 0), (1, 0), (0, -1), (0, 1))
+
+def bfs(place, row, col):
+    visited = [[False for _ in range(5)] for _ in range(5)]
+    visited[row][col] = True
+    
+    q = queue.Queue()
+    q.put((row, col, 0))
+    
+    while not q.empty():
+        curr = q.get()
+        if curr[2] > 2:
+            continue
+        if curr[2] != 0 and place[curr[0]][curr[1]] == 'P':
+            return False
+        
+        for i in range(4):
+            nr = curr[0] + D[i][0]
+            nc = curr[1] + D[i][1]
+            if nr < 0 or nr > 4 or nc < 0 or nc > 4:
+                continue
+            if visited[nr][nc]:
+                continue
+            if place[nr][nc] == 'X':
+                continue
+            visited[nr][nc] = True
+            q.put((nr, nc, curr[2] + 1))
+    return True
+    
+def check(place):
+    for r in range(5):
+        for c in range(5):
+            if place[r][c] == 'P':
+                if bfs(place, r, c) == False:
+                    return False
+    return True
+    
+def solution(places):
+    answer = []
+    
+    for place in places:
+        if check(place):
+            answer.append(1)
+        else:
+            answer.append(0)
+    return answer

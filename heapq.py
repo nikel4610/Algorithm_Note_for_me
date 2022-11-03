@@ -39,6 +39,29 @@ def heap_sort(nums):
 
 print(heap_sort([4, 1, 7, 3, 8, 5])) # [1, 3, 4, 5, 7, 8]
 
+# heapq 예시 문제
+# https://school.programmers.co.kr/learn/courses/30/lessons/42626
+
+import heapq
+
+def solution(scoville, K):
+    answer = 0
+    heapq.heapify(scoville)
+    while len(scoville) >= 2:
+        a = heapq.heappop(scoville)
+        
+        if a >= K:
+            return answer
+        else:
+            b = heapq.heappop(scoville)
+            heapq.heappush(scoville, a + b*2)
+            answer += 1
+    
+    if scoville[0] > K:
+        return answer
+    else:
+        return -1
+
 # ----------------------------------------
 
 # deque (heapq 아님)
