@@ -110,8 +110,10 @@ def solution(maps):
     dx = [1, 0, -1, 0]
     dy = [0, 1, 0, -1]
     visited = [[0]*w for _ in range(h)]
-    q = deque()
+    
     answer = 1
+
+    q = deque()
     q.append((0, 0, answer))
 
     # 큐가 빌때까지 반복함

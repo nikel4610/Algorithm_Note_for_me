@@ -180,3 +180,35 @@ def solution(gems):
 
 #----------------------------------------
 
+# https://school.programmers.co.kr/learn/courses/30/lessons/67257
+from itertools import permutation
+def solution(expression):
+    answer = 0
+    # 연산자 우선순위
+    op = ['*', '+', '-']
+    # 연산자 우선순위 순열
+    op_perm = list(permutation(op, 3))
+    # 숫자와 연산자 분리
+    num = []
+    op = []
+    temp = ''
+    for i in expression:
+        if i.isdigit():
+            temp += i
+        else:
+            num.append(int(temp))
+            op.append(i)
+            temp = ''
+    num.append(int(temp))
+    # 연산자 우선순위에 따라 계산
+    for i in op_perm:
+        temp_num = num[:]
+        temp_op = op[:]
+        for j in i:
+            while j in temp_op:
+                idx = temp_op.index(j)
+                temp_num[idx] = eval(str(temp_num[idx]) + j + str(temp_num[idx + 1]))
+                del temp_num[idx + 1]
+                del temp_op[idx]
+        answer = max(answer, abs(temp_num[0]))
+    return answer

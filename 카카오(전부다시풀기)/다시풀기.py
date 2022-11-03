@@ -13,6 +13,7 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/17686 파일명정렬    V
 # https://school.programmers.co.kr/learn/courses/30/lessons/72411 메뉴리뉴얼
 # https://school.programmers.co.kr/learn/courses/30/lessons/60058 괄호변환      V
-# https://school.programmers.co.kr/learn/courses/30/lessons/67257 수식최대화
-# https://school.programmers.co.kr/learn/courses/30/lessons/81303 표 편집
+# https://school.programmers.co.kr/learn/courses/30/lessons/67257 수식최대화    V
+# https://school.programmers.co.kr/learn/courses/30/lessons/81303 표 편집       V
 # -> list 참고
+# https://school.programmers.co.kr/learn/courses/30/lessons/67259 경주로건설**

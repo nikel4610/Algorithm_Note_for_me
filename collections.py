@@ -15,6 +15,8 @@ deque.popleft() # 왼쪽 요소 삭제
 dq = deque('리스트')
 while dq: # dq가 비어있지 않으면 반복
 
+# ---------------------------------------------
+
 # 순열과 조합 참고
 # https://velog.io/@dramatic/Python-permutation-combination-%EC%88%9C%EC%97%B4%EA%B3%BC-%EC%A1%B0%ED%95%A9
 from collections import Counter
@@ -35,3 +37,9 @@ sum(('리스트1' | '리스트2').values()) # 합집합
 ~~.find('찾을 문자', '찾기 시작할 위치')
 ~~.startswith('시작하는 문자', '시작 지점') -> True or False 반환
 ~~.endswith('끝나는 문자', '시작지점', '끝나는 지점') -> True or False 반환
+
+# ---------------------------------------------
+
+from collections import permutations
+# permutations 사용법
+permutations('배열', '몇개 뽑을지')
