@@ -239,3 +239,36 @@ def solution(user_id, banned_id):
             if users not in answer:
                 answer.append(users)
     return len(answer)
+
+#----------------------------------------
+
+# https://school.programmers.co.kr/learn/courses/30/lessons/92341
+# 주차요금계산
+
+import math
+def solution(fees, records):
+    answer = []
+    parking = {}
+    in_time = {}
+
+    for record in records:
+        time, car_num, status = record.split()
+        if status == "IN":
+            in_time[car_num] = time
+        else:
+            parking[car_num] = parking.get(car_num, 0) + (int(time[0:2]) * 60 + int(time[3:5])) - (int(in_time[car_num][0:2]) * 60 + int(in_time[car_num][3:5]))
+            del in_time[car_num]
+    
+    for key, val in in_time.items():
+        parking[key] = parking.get(key, 0) + (23 * 60 + 59) - (int(val[0:2]) * 60 + int(val[3:5]))
+    
+    # 차량 번호 순으로 정렬
+    parking = sorted(parking.items(), key=lambda x: x[0])
+    
+    for car_num, time in parking:
+        if time <= fees[0]:
+            answer.append(fees[1])
+        else:
+            answer.append(fees[1] + math.ceil((time - fees[0]) / fees[2]) * fees[3])
+
+    return answer
