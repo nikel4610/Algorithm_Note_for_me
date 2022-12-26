@@ -4,6 +4,11 @@ def lcm(a, b):
         if i % a == 0 and i % b == 0:
             return i
 
+# 약수 구하기 (1부터 n까지)
+for i in range(1, num+1):
+    if num%i == 0:
+        print(i) # i -> 약수
+
 # 소인수분해
 def solution(n):
     answer = []
